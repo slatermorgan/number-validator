@@ -23,6 +23,11 @@ func TestIsValidNumber(t *testing.T) {
 			true,
 		},
 		{
+			"Valid Ending with 0",
+			"9876543210",
+			true,
+		},
+		{
 			"Valid 3",
 			"4536026665",
 			true,

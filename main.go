@@ -41,5 +41,10 @@ func IsValidNumber(numString string) bool {
 
 	checkDigit := divisor - remainder
 
+	// If the result is 11 then a check digit of 0 is used.
+	if checkDigit == 11 {
+		return lastDigit == 0
+	}
+
 	return lastDigit == checkDigit
 }
