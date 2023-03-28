@@ -37,6 +37,16 @@ func TestIsValidNumber(t *testing.T) {
 			"4536016660",
 			false,
 		},
+		{
+			"Wrong Length",
+			"453601666",
+			false,
+		},
+		{
+			"Wrong Characters",
+			"qwertyuiop",
+			false,
+		},
 	}
 
 	for _, test := range tests {
