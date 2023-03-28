@@ -1,4 +1,4 @@
-module github.com/number-validator
+module github.com/slatermorgan/number-validator
 
 go 1.18
 

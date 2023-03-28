@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strconv"
 )
 
@@ -49,4 +50,23 @@ func IsValidNumber(input string) bool {
 	}
 
 	return lastDigit == checkDigit
+}
+
+const printTemplate = "%s returns IsValidNumber = %t"
+
+func main() {
+	numbers := []string{
+		"5990128088",
+		"1275988113",
+		"9876543210",
+		"4536026665",
+		"5990128087",
+		"4536016660",
+		"453601666",
+		"qwertyuiop",
+	}
+
+	for _, num := range numbers {
+		fmt.Println(fmt.Sprintf(printTemplate, num, IsValidNumber(num)))
+	}
 }
