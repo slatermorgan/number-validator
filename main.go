@@ -31,13 +31,12 @@ func IsValidNumber(input string) bool {
 			return false
 		}
 
-		if k == expectedNumberLength-1 {
-			lastDigit = digit
-
-			break
+		// -1 as k is the index
+		if k < expectedNumberLength-1 {
+			total += digit * weightingFactor[k]
 		}
 
-		total += digit * weightingFactor[k]
+		lastDigit = digit
 	}
 
 	remainder := total % divisor
